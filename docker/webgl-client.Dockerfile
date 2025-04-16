@@ -5,6 +5,13 @@ FROM unityci/editor:ubuntu-6000.0.46f1-webgl-3.1.0 as builder
 
 WORKDIR /project
 
+# Accept the license file as a build argument
+ARG UNITY_LICENSE
+
+# Set up Unity license directory and save the license file
+RUN mkdir -p /root/.config/unity3d && \
+    echo "$UNITY_LICENSE" > /root/.config/unity3d/Unity_v202x.x.x.ulf
+
 # Copy the entire Unity project into the build container
 COPY . .
 
