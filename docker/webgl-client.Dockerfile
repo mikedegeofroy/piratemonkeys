@@ -1,7 +1,7 @@
 # -------------------------------------
 # Stage 1: Unity WebGL Build
 # -------------------------------------
-FROM unityci/editor:2022.3.11f1-webgl-1.0.1 as builder
+FROM unityci/editor:ubuntu-6000.0.46f1-webgl-3.1.0 as builder
 
 WORKDIR /project
 
