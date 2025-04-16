@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity Web Player | dockogo-unity</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body style="text-align: center; padding: 0; border: 0; margin: 0;">
+<canvas id="unity-canvas" width=600 height=960 tabindex="-1"
+        style="width: 600px; height: 960px; background: #231F20"></canvas>
+<script src="Build/client-build.loader.js"></script>
+<script>
+    Telegram.WebApp.ready();
+
+    const tgUser = Telegram.WebApp.initDataUnsafe.user;
+    const username = tgUser?.username || `Guest${Math.floor(Math.random() * 1000)}`;
+
+    var meta = document.createElement('meta');
+    meta.name = 'viewport';
+    meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+    document.getElementsByTagName('head')[0].appendChild(meta);
+
+    var canvas = document.querySelector("#unity-canvas");
+    canvas.style.width = "100%";
+    canvas.style.height = "100%";
+    canvas.style.position = "fixed";
+
+    document.body.style.textAlign = "left";
+
+    createUnityInstance(document.querySelector("#unity-canvas"), {
+        arguments: [],
+        dataUrl: "Build/client-build.data",
+        frameworkUrl: "Build/client-build.framework.js",
+        codeUrl: "Build/client-build.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "dockogo-unity",
+        productVersion: "0.1.0",
+    }).then(unityInstance => {
+        setTimeout(() => {
+            unityInstance.SendMessage("GameManager", "SetUsername", username);
+        }, 1000);
+    });
+</script>
+</body>
+</html>
