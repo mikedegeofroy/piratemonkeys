@@ -1,7 +1,6 @@
-﻿using Mirror.Components.NetworkTransform;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Mirror.Examples._Common.Controllers.TankController
+namespace Mirror.Examples.Common.Controllers.Tank
 {
     [AddComponentMenu("Network/Tank Turret (Hybrid)")]
     [RequireComponent(typeof(TankControllerHybrid))]
@@ -31,7 +30,7 @@ namespace Mirror.Examples._Common.Controllers.TankController
                 turretNetworkTransform = NTs[1];
 
             // Ensure syncDirection is Client to Server
-            turretNetworkTransform.syncDirection = Core.SyncDirection.ClientToServer;
+            turretNetworkTransform.syncDirection = SyncDirection.ClientToServer;
 
             // Set syncPosition to false because we only want to sync rotation
             turretNetworkTransform.syncPosition = false;
@@ -49,7 +48,7 @@ namespace Mirror.Examples._Common.Controllers.TankController
                 barrelNetworkTransform = NTs[2];
 
             // Ensure syncDirection is Client to Server
-            barrelNetworkTransform.syncDirection = Core.SyncDirection.ClientToServer;
+            barrelNetworkTransform.syncDirection = SyncDirection.ClientToServer;
 
             // Set syncPosition to false because we only want to sync rotation
             barrelNetworkTransform.syncPosition = false;

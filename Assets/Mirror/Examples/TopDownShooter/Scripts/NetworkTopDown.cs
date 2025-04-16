@@ -1,7 +1,7 @@
-using Mirror.Core;
 using UnityEngine;
+using Mirror;
 
-namespace Mirror.Examples.TopDownShooter.Scripts
+namespace Mirror.Examples.TopDownShooter
 {
     public class NetworkTopDown : NetworkBehaviour
     {

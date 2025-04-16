@@ -1,9 +1,9 @@
 using System.Collections;
-using Mirror.Core;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Mirror.Examples.TopDownShooter.Scripts
+namespace Mirror.Examples.TopDownShooter
 {
     public class CanvasTopDown : MonoBehaviour
     {

@@ -1,8 +1,8 @@
-using Mirror.Core;
-using Mirror.Examples._Common.Scripts;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace Mirror.Examples._Common.Controllers.TankController
+namespace Mirror.Examples.Common.Controllers.Tank
 {
     [AddComponentMenu("")]
     [DisallowMultipleComponent]

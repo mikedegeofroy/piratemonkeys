@@ -1,6 +1,5 @@
 using Input;
 using Mirror;
-using Mirror.Core;
 using TMPro;
 using UnityEngine;
 

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Mirror.Examples._Common.Controllers.TankController
+namespace Mirror.Examples.Common.Controllers.Tank
 {
     [AddComponentMenu("")]
     [DisallowMultipleComponent]

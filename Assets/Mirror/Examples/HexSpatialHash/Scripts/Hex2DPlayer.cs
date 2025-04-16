@@ -1,8 +1,6 @@
-﻿using Mirror.Components.InterestManagement.SpatialHashing;
-using Mirror.Core;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Mirror.Examples.HexSpatialHash.Scripts
+namespace Mirror.Examples.Hex2D
 {
     [AddComponentMenu("")]
     public class Hex2DPlayer : NetworkBehaviour

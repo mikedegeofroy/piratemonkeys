@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Mirror.BouncyCastle.Crypto;
-using Mirror.Core;
-using Mirror.Core.Tools;
 using UnityEngine;
 using UnityEngine.Profiling;
 using UnityEngine.Serialization;

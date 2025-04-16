@@ -1,9 +1,7 @@
 ﻿using System.Collections;
-using Mirror.Core;
-using Mirror.Examples.PickupsDropsChilds.Scripts.Interfaces;
 using UnityEngine;
 
-namespace Mirror.Examples.PickupsDropsChilds.Scripts
+namespace Mirror.Examples.PickupsDropsChilds
 {
     public class PickupsDropsChilds : NetworkBehaviour
     {

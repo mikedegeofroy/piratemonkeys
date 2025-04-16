@@ -2,13 +2,11 @@
 // is replaced with:
 // public int Networkhealth { get; set; } properties.
 // this class processes all access to 'health' and replaces it with 'Networkhealth'
-
 using System;
-using Mirror.Core;
 using Mono.CecilX;
 using Mono.CecilX.Cil;
 
-namespace Mirror.Editor.Weaver.Processors
+namespace Mirror.Weaver
 {
     public static class SyncVarAttributeAccessReplacer
     {
@@ -54,7 +52,7 @@ namespace Mirror.Editor.Weaver.Processors
             // skip static constructor, "MirrorProcessed", "InvokeUserCode_"
             if (md.Name == ".cctor" ||
                 md.Name == NetworkBehaviourProcessor.ProcessedFunctionName ||
-                md.Name.StartsWith(RemoteProcedureCalls.InvokeRpcPrefix))
+                md.Name.StartsWith(RemoteCalls.RemoteProcedureCalls.InvokeRpcPrefix))
                 return;
 
             // skip abstract

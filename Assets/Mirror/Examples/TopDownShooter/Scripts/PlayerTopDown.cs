@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using Mirror.Core;
 using UnityEngine;
+using Mirror;
 
-namespace Mirror.Examples.TopDownShooter.Scripts
+namespace Mirror.Examples.TopDownShooter
 {
     public class PlayerTopDown : NetworkBehaviour
     {

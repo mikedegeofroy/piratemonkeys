@@ -7,12 +7,10 @@
 //
 // in this case however, we need to squeeze everything we can out of prediction
 // to support low even devices / VR.
-
 using System.Runtime.InteropServices;
-using Mirror.Core;
 using UnityEngine;
 
-namespace Mirror.Components.PredictedRigidbody
+namespace Mirror
 {
     // struct packing
 

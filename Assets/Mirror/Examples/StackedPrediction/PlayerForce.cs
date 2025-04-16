@@ -1,12 +1,9 @@
 // players can apply force to any stacked cube.
 // this has to be on the player instead of on the cube via OnMouseDown,
 // because OnMouseDown would get blocked by the predicted ghost objects.
-
-using Mirror.Components.PredictedRigidbody;
-using Mirror.Core;
 using UnityEngine;
 
-namespace Mirror.Examples.StackedPrediction
+namespace Mirror.Examples.PredictionBenchmark
 {
     public class PlayerForce : NetworkBehaviour
     {

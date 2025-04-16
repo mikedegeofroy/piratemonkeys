@@ -1,9 +1,8 @@
 using System.Collections.Generic;
-using Mirror.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Mirror.Examples.CouchCoop.Scripts
+namespace Mirror.Examples.CouchCoop
 {
     public class CouchPlayer : NetworkBehaviour
     {

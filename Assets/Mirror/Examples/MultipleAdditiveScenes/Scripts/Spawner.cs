@@ -1,10 +1,8 @@
 using System.Threading.Tasks;
-using Mirror.Core;
-using Mirror.Core.Tools;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Mirror.Examples.MultipleAdditiveScenes.Scripts
+namespace Mirror.Examples.MultipleAdditiveScenes
 {
     internal static class Spawner
     {

@@ -1,9 +1,8 @@
 using System;
-using Mirror.Core;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace Mirror.Examples._Common.Controllers.TankController
+namespace Mirror.Examples.Common.Controllers.Tank
 {
     [AddComponentMenu("")]
     [RequireComponent(typeof(Rigidbody))]

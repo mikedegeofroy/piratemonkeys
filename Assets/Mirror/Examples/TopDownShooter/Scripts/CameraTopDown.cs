@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Mirror.Examples.TopDownShooter.Scripts
+namespace Mirror.Examples.TopDownShooter
 {
     public class CameraTopDown : MonoBehaviour
     {

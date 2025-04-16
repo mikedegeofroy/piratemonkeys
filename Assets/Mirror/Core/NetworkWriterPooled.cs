@@ -1,6 +1,6 @@
 using System;
 
-namespace Mirror.Core
+namespace Mirror
 {
     /// <summary>Pooled NetworkWriter, automatically returned to pool when using 'using'</summary>
     public sealed class NetworkWriterPooled : NetworkWriter, IDisposable

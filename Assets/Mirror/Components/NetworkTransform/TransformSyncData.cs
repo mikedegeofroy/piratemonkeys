@@ -1,9 +1,8 @@
-using System;
-using Mirror.Core;
-using Mirror.Core.Tools;
 using UnityEngine;
+using System;
+using Mirror;
 
-namespace Mirror.Components.NetworkTransform
+namespace Mirror
 {
     [Serializable]
     public struct SyncData

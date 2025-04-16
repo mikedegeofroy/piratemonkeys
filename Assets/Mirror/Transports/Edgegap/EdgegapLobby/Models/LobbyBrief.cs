@@ -1,6 +1,5 @@
 using System;
-
-namespace Mirror.Transports.Edgegap.EdgegapLobby.Models
+namespace Edgegap
 {
     // Brief lobby data, returned by the list function
     [Serializable]

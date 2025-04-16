@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
-
-namespace Mirror.Components.Profiling
+namespace Mirror
 {
     public class FpsMinMaxAvgGraph : BaseUIGraph
     {

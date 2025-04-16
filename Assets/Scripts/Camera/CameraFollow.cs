@@ -1,5 +1,4 @@
 using Mirror;
-using Mirror.Core;
 using UnityEngine;
 
 namespace Camera

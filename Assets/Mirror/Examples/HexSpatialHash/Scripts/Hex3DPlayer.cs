@@ -1,7 +1,7 @@
-﻿using Mirror.Core;
-using UnityEngine;
+﻿using UnityEngine;
+using Mirror;
 
-namespace Mirror.Examples.HexSpatialHash.Scripts
+namespace Mirror.Examples.Hex3D
 {
     [AddComponentMenu("")]
     public class Hex3DPlayer : NetworkBehaviour

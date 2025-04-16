@@ -8,9 +8,6 @@ using Mirror.BouncyCastle.Crypto.Digests;
 using Mirror.BouncyCastle.Crypto.Generators;
 using Mirror.BouncyCastle.Crypto.Modes;
 using Mirror.BouncyCastle.Crypto.Parameters;
-using Mirror.Core;
-using Mirror.Core.Threading;
-using Mirror.Core.Tools;
 using UnityEngine.Profiling;
 
 namespace Mirror.Transports.Encryption

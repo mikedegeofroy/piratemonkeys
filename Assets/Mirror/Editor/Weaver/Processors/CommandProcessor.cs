@@ -1,9 +1,7 @@
-using Mirror.Core;
-using Mirror.Core.Tools;
 using Mono.CecilX;
 using Mono.CecilX.Cil;
 
-namespace Mirror.Editor.Weaver.Processors
+namespace Mirror.Weaver
 {
     // Processes [Command] methods in NetworkBehaviour
     public static class CommandProcessor
@@ -86,7 +84,7 @@ namespace Mirror.Editor.Weaver.Processors
         */
         public static MethodDefinition ProcessCommandInvoke(WeaverTypes weaverTypes, Readers readers, Logger Log, TypeDefinition td, MethodDefinition method, MethodDefinition cmdCallFunc, ref bool WeavingFailed)
         {
-            string cmdName = Weaver.GenerateMethodName(RemoteProcedureCalls.InvokeRpcPrefix, method);
+            string cmdName = Weaver.GenerateMethodName(RemoteCalls.RemoteProcedureCalls.InvokeRpcPrefix, method);
 
             MethodDefinition cmd = new MethodDefinition(cmdName,
                 MethodAttributes.Family | MethodAttributes.Static | MethodAttributes.HideBySig,

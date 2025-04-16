@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Mirror.Examples.TopDownShooter.Scripts
+namespace Mirror.Examples.TopDownShooter
 {
     public class RespawnPortal : MonoBehaviour
     {

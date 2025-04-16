@@ -1,9 +1,10 @@
-using Mirror.Core;
-using Mirror.Examples._Common.Controllers.TankController;
-using Mirror.Examples._Common.Scripts;
+using System.Collections.Generic;
 using UnityEngine;
+using Mirror.Examples.Common.Controllers.Tank;
+using Mirror.Examples.Common;
+using System.Collections;
 
-namespace Mirror.Examples.TankTheftAuto.Scripts
+namespace Mirror.Examples.TankTheftAuto
 {
     [AddComponentMenu("")]
     [DisallowMultipleComponent]

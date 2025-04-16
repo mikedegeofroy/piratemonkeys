@@ -1,11 +1,9 @@
-using Mirror.Components.InterestManagement.SpatialHashing;
-using Mirror.Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 // This sets up the scene camera for the local player
 
-namespace Mirror.Examples.HexSpatialHash.Scripts
+namespace Mirror.Examples.Hex2D
 {
     [AddComponentMenu("")]
     [DisallowMultipleComponent]

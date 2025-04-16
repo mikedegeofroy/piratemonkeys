@@ -1,8 +1,11 @@
-using Mirror.Transports.Edgegap.EdgegapLobby.Models;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using Edgegap;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Mirror.Examples.EdgegapLobby.Scripts
+namespace Mirror.Examples.EdgegapLobby
 {
     public class UILobbyEntry : MonoBehaviour
     {

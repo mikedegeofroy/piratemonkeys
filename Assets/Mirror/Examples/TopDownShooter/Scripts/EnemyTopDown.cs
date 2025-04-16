@@ -1,9 +1,9 @@
 using System.Collections;
-using Mirror.Core;
 using UnityEngine;
 using UnityEngine.AI;
+using Mirror;
 
-namespace Mirror.Examples.TopDownShooter.Scripts
+namespace Mirror.Examples.TopDownShooter
 {
     public class EnemyTopDown : NetworkBehaviour
     {

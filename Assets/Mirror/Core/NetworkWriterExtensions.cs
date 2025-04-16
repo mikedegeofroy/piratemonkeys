@@ -1,9 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Mirror.Core.Tools;
 using UnityEngine;
 
-namespace Mirror.Core
+namespace Mirror
 {
     // Mirror's Weaver automatically detects all NetworkWriter function types,
     // but they do all need to be extensions.

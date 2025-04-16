@@ -1,12 +1,11 @@
 using System.Collections.Generic;
-using Mirror.Components.InterestManagement.Distance;
-using Mirror.Core;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-namespace Mirror.Components.InterestManagement.SceneDistance
+namespace Mirror
 {
     [AddComponentMenu("Network/ Interest Management/ Scene/Scene Distance Interest Management")]
-    public class SceneDistanceInterestManagement : Core.InterestManagement
+    public class SceneDistanceInterestManagement : InterestManagement
     {
         [Tooltip("The maximum range that objects will be visible at. Add DistanceInterestManagementCustomRange onto NetworkIdentities for custom ranges.")]
         public int visRange = 500;
@@ -34,13 +33,13 @@ namespace Mirror.Components.InterestManagement.SceneDistance
 
         // Use Scene instead of string scene.name because when additively
         // loading multiples of a subscene the name won't be unique
-        readonly Dictionary<UnityEngine.SceneManagement.Scene, HashSet<NetworkIdentity>> sceneObjects =
-            new Dictionary<UnityEngine.SceneManagement.Scene, HashSet<NetworkIdentity>>();
+        readonly Dictionary<Scene, HashSet<NetworkIdentity>> sceneObjects =
+            new Dictionary<Scene, HashSet<NetworkIdentity>>();
 
-        readonly Dictionary<NetworkIdentity, UnityEngine.SceneManagement.Scene> lastObjectScene =
-            new Dictionary<NetworkIdentity, UnityEngine.SceneManagement.Scene>();
+        readonly Dictionary<NetworkIdentity, Scene> lastObjectScene =
+            new Dictionary<NetworkIdentity, Scene>();
 
-        HashSet<UnityEngine.SceneManagement.Scene> dirtyScenes = new HashSet<UnityEngine.SceneManagement.Scene>();
+        HashSet<Scene> dirtyScenes = new HashSet<Scene>();
 
         [ServerCallback]
         public override void OnSpawned(NetworkIdentity identity)
@@ -48,7 +47,7 @@ namespace Mirror.Components.InterestManagement.SceneDistance
             if (identity.TryGetComponent(out DistanceInterestManagementCustomRange custom))
                 CustomRanges[identity] = custom;
 
-            UnityEngine.SceneManagement.Scene currentScene = identity.gameObject.scene;
+            Scene currentScene = identity.gameObject.scene;
             lastObjectScene[identity] = currentScene;
             // Debug.Log($"SceneInterestManagement.OnSpawned({identity.name}) currentScene: {currentScene}");
             if (!sceneObjects.TryGetValue(currentScene, out HashSet<NetworkIdentity> objects))
@@ -69,7 +68,7 @@ namespace Mirror.Components.InterestManagement.SceneDistance
             // Multiple objects could be destroyed in same frame and we don't
             // want to rebuild for each one...let LateUpdate do it once.
             // We must add the current scene to dirtyScenes for LateUpdate to rebuild it.
-            if (lastObjectScene.TryGetValue(identity, out UnityEngine.SceneManagement.Scene currentScene))
+            if (lastObjectScene.TryGetValue(identity, out Scene currentScene))
             {
                 lastObjectScene.Remove(identity);
                 if (sceneObjects.TryGetValue(currentScene, out HashSet<NetworkIdentity> objects) && objects.Remove(identity))
@@ -89,10 +88,10 @@ namespace Mirror.Components.InterestManagement.SceneDistance
             //       rebuild all
             foreach (NetworkIdentity identity in NetworkServer.spawned.Values)
             {
-                if (!lastObjectScene.TryGetValue(identity, out UnityEngine.SceneManagement.Scene currentScene))
+                if (!lastObjectScene.TryGetValue(identity, out Scene currentScene))
                     continue;
 
-                UnityEngine.SceneManagement.Scene newScene = identity.gameObject.scene;
+                Scene newScene = identity.gameObject.scene;
                 if (newScene == currentScene)
                 {
                     if (NetworkTime.localTime >= lastRebuildTime + rebuildInterval)
@@ -127,13 +126,13 @@ namespace Mirror.Components.InterestManagement.SceneDistance
             }
 
             // rebuild all dirty scenes
-            foreach (UnityEngine.SceneManagement.Scene dirtyScene in dirtyScenes)
+            foreach (Scene dirtyScene in dirtyScenes)
                 RebuildSceneObservers(dirtyScene);
 
             dirtyScenes.Clear();
         }
 
-        void RebuildSceneObservers(UnityEngine.SceneManagement.Scene scene)
+        void RebuildSceneObservers(Scene scene)
         {
             foreach (NetworkIdentity netIdentity in sceneObjects[scene])
                 if (netIdentity != null)

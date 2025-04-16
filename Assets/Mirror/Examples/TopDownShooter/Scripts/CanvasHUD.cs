@@ -1,8 +1,8 @@
-using Mirror.Core;
 using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
 
-namespace Mirror.Examples.TopDownShooter.Scripts
+namespace Mirror.Examples.TopDownShooter
 {
     // Note: EventSystem is needed in your scene for Unitys UI Canvas
     public class CanvasHUD : MonoBehaviour

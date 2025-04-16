@@ -4,12 +4,9 @@
 // because here we can check who the rigidbody belongs to more easily.
 // ... that's just the best practice at the moment, maybe we can make this
 //     easier in the future ...
-
-using Mirror.Components.PredictedRigidbody;
-using Mirror.Core;
 using UnityEngine;
 
-namespace Mirror.Examples.BilliardsPredicted.Ball
+namespace Mirror.Examples.BilliardsPredicted
 {
     public class Pockets : MonoBehaviour
     {

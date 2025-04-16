@@ -1,12 +1,10 @@
 using System;
 using System.Collections;
 using System.Threading;
-using Mirror.Core;
-using Mirror.Transports.Edgegap.EdgegapLobby.Models;
-using Mirror.Transports.Edgegap.EdgegapRelay;
+using Mirror;
 using UnityEngine;
 using Random = UnityEngine.Random;
-namespace Mirror.Transports.Edgegap.EdgegapLobby
+namespace Edgegap
 {
     [HelpURL("https://mirror-networking.gitbook.io/docs/manual/transports/edgegap-transports/edgegap-relay")]
     public class EdgegapLobbyKcpTransport : EdgegapKcpTransport

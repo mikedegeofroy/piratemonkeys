@@ -1,8 +1,7 @@
 using System;
-using Mirror.Core;
 using UnityEngine;
 
-namespace Mirror.Examples._Common.Controllers.TankController
+namespace Mirror.Examples.Common.Controllers.Tank
 {
     [AddComponentMenu("")]
     [RequireComponent(typeof(NetworkIdentity))]
@@ -195,7 +194,7 @@ namespace Mirror.Examples._Common.Controllers.TankController
         protected virtual void Reset()
         {
             // Ensure syncDirection is Client to Server
-            syncDirection = Core.SyncDirection.ClientToServer;
+            syncDirection = SyncDirection.ClientToServer;
 
             if (animator == null)
                 animator = GetComponentInChildren<Animator>();

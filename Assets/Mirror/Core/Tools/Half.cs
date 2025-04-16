@@ -10,13 +10,13 @@
 // Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
-using System;
+using System.Diagnostics;
 using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Mirror.Core.Tools
+namespace System
 {
     // Portions of the code implemented below are based on the 'Berkeley SoftFloat Release 3e' algorithms.
 

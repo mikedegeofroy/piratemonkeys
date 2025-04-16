@@ -1,9 +1,8 @@
 using System;
-using Mirror.Core;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
-
-namespace Mirror.Components.Profiling
+namespace Mirror
 {
     public enum GraphAggregationMode
     {

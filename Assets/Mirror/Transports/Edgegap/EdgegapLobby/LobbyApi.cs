@@ -1,10 +1,10 @@
 using System;
+using System.Collections.Generic;
 using System.Text;
-using Mirror.Transports.Edgegap.EdgegapLobby.Models;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace Mirror.Transports.Edgegap.EdgegapLobby
+namespace Edgegap
 {
     // Implements the edgegap lobby api: https://docs.edgegap.com/docs/lobby/functions
     public class LobbyApi

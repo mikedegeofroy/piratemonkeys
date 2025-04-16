@@ -1,8 +1,7 @@
-﻿using Mirror.Components.InterestManagement.SpatialHashing;
-using Mirror.Core;
+﻿using System;
 using UnityEngine;
 
-namespace Mirror.Examples.HexSpatialHash.Scripts
+namespace Mirror.Examples.Hex2D
 {
     [AddComponentMenu("")]
     [RequireComponent(typeof(HexSpatialHash2DInterestManagement))]

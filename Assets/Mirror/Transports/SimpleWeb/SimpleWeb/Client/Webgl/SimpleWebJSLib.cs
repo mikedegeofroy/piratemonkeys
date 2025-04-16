@@ -1,7 +1,9 @@
 using System;
+#if UNITY_WEBGL
 using System.Runtime.InteropServices;
+#endif
 
-namespace Mirror.Transports.SimpleWeb.SimpleWeb.Client.Webgl
+namespace Mirror.SimpleWeb
 {
     internal static class SimpleWebJSLib
     {

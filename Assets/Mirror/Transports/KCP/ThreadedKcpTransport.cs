@@ -2,18 +2,13 @@
 // Elevates a few milliseconds of transport computations into a worker thread.
 //
 //#if MIRROR <- commented out because MIRROR isn't defined on first import yet
-
 using System;
 using System.Net;
-using Mirror.Core;
-using Mirror.Core.Tools;
-using Mirror.Transports.KCP.kcp2k.highlevel;
-using Mirror.Transports.KCP.kcp2k.kcp;
-using Mirror.Transports.Threaded;
+using Mirror;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace Mirror.Transports.KCP
+namespace kcp2k
 {
     [HelpURL("https://mirror-networking.gitbook.io/docs/transports/kcp-transport")]
     [DisallowMultipleComponent]

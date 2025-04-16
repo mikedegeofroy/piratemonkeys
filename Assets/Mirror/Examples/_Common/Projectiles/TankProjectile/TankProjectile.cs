@@ -1,8 +1,6 @@
-﻿using Mirror.Core;
-using Mirror.Examples._Common.Controllers.TankController;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Mirror.Examples._Common.Projectiles.TankProjectile
+namespace Mirror.Examples.Common
 {
     [AddComponentMenu("")]
     [RequireComponent(typeof(Rigidbody))]
@@ -51,7 +49,7 @@ namespace Mirror.Examples._Common.Projectiles.TankProjectile
         {
             //Debug.Log($"Hit: {collision.gameObject}");
 
-            if (NetworkServer.active && collision.gameObject.TryGetComponent(out TankHealth tankHealth))
+            if (NetworkServer.active && collision.gameObject.TryGetComponent(out Controllers.Tank.TankHealth tankHealth))
                 tankHealth.TakeDamage(1);
 
             Destroy(gameObject);

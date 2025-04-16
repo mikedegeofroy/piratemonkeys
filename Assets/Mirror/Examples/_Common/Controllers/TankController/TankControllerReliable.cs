@@ -1,7 +1,6 @@
-﻿using Mirror.Components.NetworkTransform;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Mirror.Examples._Common.Controllers.TankController
+namespace Mirror.Examples.Common.Controllers.Tank
 {
     [AddComponentMenu("Network/Tank Controller (Reliable)")]
     [RequireComponent(typeof(NetworkTransformReliable))]

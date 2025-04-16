@@ -1,7 +1,6 @@
-﻿using Mirror.Core;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Mirror.Examples._Common.Scripts.PhysicsSimulator
+namespace Mirror.Examples.Common
 {
     [AddComponentMenu("")]
     public class PhysicsSimulator : MonoBehaviour

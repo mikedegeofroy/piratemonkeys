@@ -1,8 +1,6 @@
-using Mirror.Components.PredictedRigidbody;
-using Mirror.Core;
 using UnityEngine;
 
-namespace Mirror.Examples.BenchmarkPrediction
+namespace Mirror.Examples.PredictionBenchmark
 {
     public class RandomForce : NetworkBehaviour
     {

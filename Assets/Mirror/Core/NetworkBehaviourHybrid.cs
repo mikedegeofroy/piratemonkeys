@@ -1,12 +1,10 @@
 // base class for "Hybrid" sync components.
 // inspired by the Quake networking model, but made to scale.
 // https://www.jfedor.org/quake3/
-
 using System;
-using Mirror.Core.Tools;
 using UnityEngine;
 
-namespace Mirror.Core
+namespace Mirror
 {
     public abstract class NetworkBehaviourHybrid : NetworkBehaviour
     {

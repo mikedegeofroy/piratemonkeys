@@ -1,10 +1,7 @@
 using System.Collections;
-using Mirror.Components.NetworkTransform;
-using Mirror.Core;
-using Mirror.Examples.PickupsDropsChilds.Scripts.Interfaces;
 using UnityEngine;
 
-namespace Mirror.Examples.PickupsDropsChilds.Scripts
+namespace Mirror.Examples.PickupsDropsChilds
 {
     [RequireComponent(typeof(Rigidbody))]
     public class SceneObject : NetworkBehaviour
@@ -44,7 +41,7 @@ namespace Mirror.Examples.PickupsDropsChilds.Scripts
                 rb.isKinematic = true;
 
             if (TryGetComponent(out NetworkTransformBase nt))
-                nt.syncDirection = Core.SyncDirection.ServerToClient;
+                nt.syncDirection = SyncDirection.ServerToClient;
         }
 
         public override void OnStartServer()

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace Mirror.Hosting.Edgegap.Editor
+namespace Edgegap.Editor
 {
     public class CustomPopupContent : PopupWindowContent
     {

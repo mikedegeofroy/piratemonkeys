@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Mirror;
 using System.Collections;
-using Mirror.Core;
 
 /*
 	Documentation: https://mirror-networking.gitbook.io/docs/components/network-manager

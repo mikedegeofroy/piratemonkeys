@@ -1,12 +1,13 @@
 using System;
 using System.Net;
-using Mirror.Components.Discovery;
 using UnityEngine;
+using UnityEngine.Events;
+using Mirror.Discovery;
 
 
 //[Serializable]
 //public class ServerFoundUnityEvent<TResponseType> : UnityEvent<TResponseType> { };
-namespace Mirror.Examples.AutoLANClientController.Scripts
+namespace Mirror.Examples.AutoLANClientController
 {
     [DisallowMultipleComponent]
     [AddComponentMenu("Network/Network Discovery")]

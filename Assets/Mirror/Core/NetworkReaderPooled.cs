@@ -1,6 +1,6 @@
 using System;
 
-namespace Mirror.Core
+namespace Mirror
 {
     /// <summary>Pooled NetworkReader, automatically returned to pool when using 'using'</summary>
     public sealed class NetworkReaderPooled : NetworkReader, IDisposable

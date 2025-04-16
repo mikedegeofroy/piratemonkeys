@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Mirror.Examples.PickupsDropsChilds.Scripts.Interfaces
+namespace Mirror.Examples.PickupsDropsChilds
 {
     public class EquippedBat : MonoBehaviour, IEquipped
     {

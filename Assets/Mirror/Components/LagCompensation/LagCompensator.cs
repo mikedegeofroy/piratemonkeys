@@ -1,12 +1,10 @@
 // Add this component to a Player object with collider.
 // Automatically keeps a history for lag compensation.
-
+using System;
 using System.Collections.Generic;
-using Mirror.Core;
-using Mirror.Core.LagCompensation;
 using UnityEngine;
 
-namespace Mirror.Components.LagCompensation
+namespace Mirror
 {
     public struct Capture3D : Capture
     {
@@ -78,14 +76,14 @@ namespace Mirror.Components.LagCompensation
             );
 
             // insert into history
-            Core.LagCompensation.LagCompensation.Insert(history, lagCompensationSettings.historyLimit, NetworkTime.localTime, capture);
+            LagCompensation.Insert(history, lagCompensationSettings.historyLimit, NetworkTime.localTime, capture);
         }
 
         protected virtual void OnDrawGizmos()
         {
             // draw history
             Gizmos.color = historyColor;
-            Core.LagCompensation.LagCompensation.DrawGizmos(history);
+            LagCompensation.DrawGizmos(history);
         }
 
         // sampling ////////////////////////////////////////////////////////////
@@ -99,10 +97,10 @@ namespace Mirror.Components.LagCompensation
             // https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking
             // the estimation is very good. the error is as low as ~6ms for the demo.
             // note that passing 'rtt' is fine: EstimateTime halves it to latency.
-            double estimatedTime = Core.LagCompensation.LagCompensation.EstimateTime(NetworkTime.localTime, viewer.rtt, NetworkClient.bufferTime);
+            double estimatedTime = LagCompensation.EstimateTime(NetworkTime.localTime, viewer.rtt, NetworkClient.bufferTime);
 
             // sample the history to get the nearest snapshots around 'timestamp'
-            if (Core.LagCompensation.LagCompensation.Sample(history, estimatedTime, lagCompensationSettings.captureInterval, out Capture3D resultBefore, out Capture3D resultAfter, out double t))
+            if (LagCompensation.Sample(history, estimatedTime, lagCompensationSettings.captureInterval, out Capture3D resultBefore, out Capture3D resultAfter, out double t))
             {
                 // interpolate to get a decent estimation at exactly 'timestamp'
                 sample = Capture3D.Interpolate(resultBefore, resultAfter, t);

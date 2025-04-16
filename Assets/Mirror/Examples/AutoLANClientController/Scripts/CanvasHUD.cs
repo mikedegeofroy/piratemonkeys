@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using Mirror.Components.Discovery;
-using Mirror.Core;
 using UnityEngine;
+using Mirror;
 using UnityEngine.UI;
+using Mirror.Discovery;
+using UnityEngine.SceneManagement;
 
-namespace Mirror.Examples.AutoLANClientController.Scripts
+namespace Mirror.Examples.AutoLANClientController
 {
     public class CanvasHUD : MonoBehaviour
     {

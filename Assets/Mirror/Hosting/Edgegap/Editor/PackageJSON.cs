@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using UnityEngine;
 
-namespace Mirror.Hosting.Edgegap.Editor
+namespace Edgegap.Editor
 {
     [Serializable]
     public class PackageJSON

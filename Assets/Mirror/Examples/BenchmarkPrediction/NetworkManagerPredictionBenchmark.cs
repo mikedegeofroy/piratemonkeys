@@ -1,7 +1,6 @@
-using Mirror.Core;
 using UnityEngine;
 
-namespace Mirror.Examples.BenchmarkPrediction
+namespace Mirror.Examples.PredictionBenchmark
 {
     [AddComponentMenu("")]
     public class NetworkManagerPredictionBenchmark : NetworkManager

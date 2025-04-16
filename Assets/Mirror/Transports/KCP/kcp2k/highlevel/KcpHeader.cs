@@ -1,6 +1,6 @@
 using System;
 
-namespace Mirror.Transports.KCP.kcp2k.highlevel
+namespace kcp2k
 {
     // header for messages processed by kcp.
     // this is NOT for the raw receive messages(!) because handshake/disconnect

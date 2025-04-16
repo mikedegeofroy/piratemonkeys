@@ -1,6 +1,6 @@
 using System;
-
-namespace Mirror.Transports.Edgegap.EdgegapLobby.Models
+using System.Collections.Generic;
+namespace Edgegap
 {
     // https://docs.edgegap.com/docs/lobby/functions#functions
     [Serializable]

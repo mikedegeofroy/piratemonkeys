@@ -1,6 +1,5 @@
 using UnityEngine;
-
-namespace Mirror.Examples.CouchCoop.Scripts
+namespace Mirror.Examples.CouchCoop
 {
     public class CameraViewForAll : MonoBehaviour
     {

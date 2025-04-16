@@ -1,6 +1,5 @@
 using UnityEngine;
-
-namespace Mirror.Components.Profiling
+namespace Mirror
 {
     public class ToggleHotkey : MonoBehaviour
     {

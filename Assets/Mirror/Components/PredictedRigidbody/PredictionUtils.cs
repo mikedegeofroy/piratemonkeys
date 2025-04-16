@@ -1,9 +1,8 @@
 // standalone utility functions for PredictedRigidbody component.
-
 using System;
 using UnityEngine;
 
-namespace Mirror.Components.PredictedRigidbody
+namespace Mirror
 {
     public static class PredictionUtils
     {

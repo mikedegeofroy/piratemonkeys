@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Mirror.Examples._Common.Controllers
+namespace Mirror.Examples.Common.Controllers
 {
     [AddComponentMenu("")]
     [DisallowMultipleComponent]

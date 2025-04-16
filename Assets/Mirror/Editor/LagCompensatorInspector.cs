@@ -1,10 +1,9 @@
-using Mirror.Components.LagCompensation;
 using UnityEditor;
 
-namespace Mirror.Editor
+namespace Mirror
 {
     [CustomEditor(typeof(LagCompensator))]
-    public class LagCompensatorInspector : UnityEditor.Editor
+    public class LagCompensatorInspector : Editor
     {
         public override void OnInspectorGUI()
         {

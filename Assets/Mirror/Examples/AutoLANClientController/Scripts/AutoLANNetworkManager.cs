@@ -1,12 +1,14 @@
-using System.Linq;
-using Mirror.Core;
+using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Mirror;
+using System.Linq;
 
 /*
 	Documentation: https://mirror-networking.gitbook.io/docs/components/network-manager
 	API Reference: https://mirror-networking.com/docs/api/Mirror.NetworkManager.html
 */
-namespace Mirror.Examples.AutoLANClientController.Scripts
+namespace Mirror.Examples.AutoLANClientController
 {
     public class AutoLANNetworkManager : NetworkManager
     {

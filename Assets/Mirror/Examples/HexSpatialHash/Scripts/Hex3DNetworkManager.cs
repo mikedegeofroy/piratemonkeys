@@ -1,7 +1,7 @@
-﻿using Mirror.Core;
+﻿using System;
 using UnityEngine;
 
-namespace Mirror.Examples.HexSpatialHash.Scripts
+namespace Mirror.Examples.Hex3D
 {
     [AddComponentMenu("")]
     public class Hex3DNetworkManager : NetworkManager

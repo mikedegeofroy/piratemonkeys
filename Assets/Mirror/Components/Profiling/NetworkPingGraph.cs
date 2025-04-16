@@ -1,8 +1,6 @@
 using System;
-using Mirror.Core;
 using UnityEngine;
-
-namespace Mirror.Components.Profiling
+namespace Mirror
 {
     public class NetworkPingGraph : BaseUIGraph
     {

@@ -1,8 +1,7 @@
-using Mirror.Core;
-using UnityEditor;
 using UnityEngine;
+using UnityEditor;
 
-namespace Mirror.Editor
+namespace Mirror
 {
     [CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
     public class ReadOnlyDrawer : PropertyDrawer

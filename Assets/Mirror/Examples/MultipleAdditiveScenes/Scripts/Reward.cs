@@ -1,15 +1,13 @@
-using Mirror.Core;
-using Mirror.Examples._Common.Scripts;
 using UnityEngine;
 
-namespace Mirror.Examples.MultipleAdditiveScenes.Scripts
+namespace Mirror.Examples.MultipleAdditiveScenes
 {
     [AddComponentMenu("")]
-    [RequireComponent(typeof(RandomColor))]
+    [RequireComponent(typeof(Common.RandomColor))]
     public class Reward : NetworkBehaviour
     {
         [Header("Components")]
-        public RandomColor randomColor;
+        public Common.RandomColor randomColor;
 
         [Header("Diagnostics")]
         [ReadOnly, SerializeField]
@@ -29,7 +27,7 @@ namespace Mirror.Examples.MultipleAdditiveScenes.Scripts
             transform.position = new Vector3(0, -1000, 0);
 
             if (randomColor == null)
-                randomColor = GetComponent<RandomColor>();
+                randomColor = GetComponent<Common.RandomColor>();
         }
 
         public override void OnStartServer()

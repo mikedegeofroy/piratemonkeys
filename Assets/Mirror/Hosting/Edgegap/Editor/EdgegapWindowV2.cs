@@ -8,21 +8,23 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Mirror.Hosting.Edgegap.Editor.Api;
-using Mirror.Hosting.Edgegap.Editor.Api.Models;
-using Mirror.Hosting.Edgegap.Editor.Api.Models.Requests;
-using Mirror.Hosting.Edgegap.Editor.Api.Models.Results;
+using System.Web;
+using Edgegap.Editor.Api;
+using Edgegap.Editor.Api.Models;
+using Edgegap.Editor.Api.Models.Requests;
+using Edgegap.Editor.Api.Models.Results;
+using Edgegap.Codice.Utils;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Application = UnityEngine.Application;
-using HttpUtility = Mirror.Hosting.Edgegap.Dependencies.HttpUtility; // MIRROR CHANGE for Unity 2023 support
+using HttpUtility = Edgegap.Codice.Utils.HttpUtility; // MIRROR CHANGE for Unity 2023 support
 #if !EDGEGAP_PLUGIN_SERVERS
 using UnityEditor.Build;
 #endif
 
-namespace Mirror.Hosting.Edgegap.Editor
+namespace Edgegap.Editor
 {
     /// <summary>
     /// Editor logic event handler for "UI Builder" EdgegapWindow.uxml, superceding` EdgegapWindow.cs`.

@@ -2,9 +2,8 @@ using System;
 using System.Threading;
 using UnityEditor;
 using UnityEngine;
-
 #if UNITY_EDITOR
-namespace Mirror.Transports.Edgegap.EdgegapLobby
+namespace Edgegap
 {
     public class LobbyServiceCreateDialogue : EditorWindow
     {

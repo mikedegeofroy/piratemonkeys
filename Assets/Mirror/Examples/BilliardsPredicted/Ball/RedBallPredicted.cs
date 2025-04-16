@@ -1,7 +1,7 @@
 
-using Mirror.Core;
+using UnityEngine;
 
-namespace Mirror.Examples.BilliardsPredicted.Ball
+namespace Mirror.Examples.BilliardsPredicted
 {
     // keep the empty script so we can find out what type of ball we collided with.
     public class RedBallPredicted : NetworkBehaviour

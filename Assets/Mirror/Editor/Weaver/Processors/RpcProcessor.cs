@@ -1,16 +1,14 @@
-using Mirror.Core;
-using Mirror.Core.Tools;
 using Mono.CecilX;
 using Mono.CecilX.Cil;
 
-namespace Mirror.Editor.Weaver.Processors
+namespace Mirror.Weaver
 {
     // Processes [Rpc] methods in NetworkBehaviour
     public static class RpcProcessor
     {
         public static MethodDefinition ProcessRpcInvoke(WeaverTypes weaverTypes, Writers writers, Readers readers, Logger Log, TypeDefinition td, MethodDefinition md, MethodDefinition rpcCallFunc, ref bool WeavingFailed)
         {
-            string rpcName = Weaver.GenerateMethodName(RemoteProcedureCalls.InvokeRpcPrefix, md);
+            string rpcName = Weaver.GenerateMethodName(RemoteCalls.RemoteProcedureCalls.InvokeRpcPrefix, md);
 
             MethodDefinition rpc = new MethodDefinition(rpcName, MethodAttributes.Family | MethodAttributes.Static | MethodAttributes.HideBySig,
                                                         weaverTypes.Import(typeof(void)));

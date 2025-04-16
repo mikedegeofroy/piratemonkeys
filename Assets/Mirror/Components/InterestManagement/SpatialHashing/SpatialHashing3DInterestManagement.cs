@@ -3,15 +3,13 @@
 // => scales way higher
 // checks on three dimensions (XYZ) which includes the vertical axes.
 // this is slower than XY checking for regular spatial hashing.
-
 using System.Collections.Generic;
-using Mirror.Core;
 using UnityEngine;
 
-namespace Mirror.Components.InterestManagement.SpatialHashing
+namespace Mirror
 {
     [AddComponentMenu("Network/ Interest Management/ Spatial Hash/Spatial Hashing Interest Management")]
-    public class SpatialHashing3DInterestManagement : Core.InterestManagement
+    public class SpatialHashing3DInterestManagement : InterestManagement
     {
         [Tooltip("The maximum range that objects will be visible at.")]
         public int visRange = 30;

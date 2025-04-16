@@ -1,6 +1,4 @@
-using Mirror.Core.Tools;
-
-namespace Mirror.Examples.PickupsDropsChilds.Scripts.Interfaces
+namespace Mirror.Examples.PickupsDropsChilds
 {
     interface IEquipped
     {

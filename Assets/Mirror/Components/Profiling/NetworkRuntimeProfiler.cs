@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using Mirror.Core;
-using Mirror.Core.Tools;
+using Mirror.RemoteCalls;
 using UnityEngine;
 
-namespace Mirror.Components.Profiling
+namespace Mirror
 {
     public class NetworkRuntimeProfiler : MonoBehaviour
     {

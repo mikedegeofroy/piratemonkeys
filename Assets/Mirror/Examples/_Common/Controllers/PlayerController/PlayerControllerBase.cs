@@ -1,9 +1,8 @@
 using System;
-using Mirror.Core;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace Mirror.Examples._Common.Controllers.PlayerController
+namespace Mirror.Examples.Common.Controllers.Player
 {
     [AddComponentMenu("")]
     [RequireComponent(typeof(Rigidbody))]

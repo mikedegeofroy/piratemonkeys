@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Mirror.Transports.Encryption.Editor
+namespace Mirror.Transports.Encryption
 {
     [CustomEditor(typeof(EncryptionTransport), true)]
     public class EncryptionTransportInspector : UnityEditor.Editor

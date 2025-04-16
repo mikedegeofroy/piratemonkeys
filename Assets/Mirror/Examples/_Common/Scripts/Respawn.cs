@@ -1,8 +1,7 @@
 using System.Collections;
-using Mirror.Core;
 using UnityEngine;
 
-namespace Mirror.Examples._Common.Scripts
+namespace Mirror.Examples.Common
 {
     public class Respawn
     {

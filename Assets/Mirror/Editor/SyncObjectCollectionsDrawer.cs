@@ -1,15 +1,13 @@
 // helper class for NetworkBehaviourInspector to draw all enumerable SyncObjects
 // (SyncList/Set/Dictionary)
 // 'SyncObjectCollectionsDrawer' is a nicer name than 'IEnumerableSyncObjectsDrawer'
-
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text.RegularExpressions;
-using Mirror.Core;
 using UnityEditor;
 
-namespace Mirror.Editor
+namespace Mirror
 {
     class SyncObjectCollectionField
     {

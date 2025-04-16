@@ -1,10 +1,9 @@
 // Prediction moves out the Rigidbody & Collider into a separate object.
 // this component simply points back to the owner component.
 // in case Raycasts hit it and need to know the owner, etc.
-
 using UnityEngine;
 
-namespace Mirror.Components.PredictedRigidbody
+namespace Mirror
 {
     public class PredictedRigidbodyPhysicsGhost : MonoBehaviour
     {

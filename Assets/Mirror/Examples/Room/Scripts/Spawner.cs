@@ -1,9 +1,7 @@
 using System.Threading.Tasks;
-using Mirror.Core;
-using Mirror.Core.Tools;
 using UnityEngine;
 
-namespace Mirror.Examples.Room.Scripts
+namespace Mirror.Examples.NetworkRoom
 {
     internal static class Spawner
     {

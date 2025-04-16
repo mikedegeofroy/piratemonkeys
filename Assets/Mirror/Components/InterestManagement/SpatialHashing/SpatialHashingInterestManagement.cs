@@ -3,15 +3,13 @@
 // => scales way higher
 // checks on two dimensions only(!), for example: XZ for 3D games or XY for 2D games.
 // this is faster than XYZ checking but doesn't check vertical distance.
-
 using System.Collections.Generic;
-using Mirror.Core;
 using UnityEngine;
 
-namespace Mirror.Components.InterestManagement.SpatialHashing
+namespace Mirror
 {
     [AddComponentMenu("Network/ Interest Management/ Spatial Hash/Spatial Hashing Interest Management")]
-    public class SpatialHashingInterestManagement : Core.InterestManagement
+    public class SpatialHashingInterestManagement : InterestManagement
     {
         [Tooltip("The maximum range that objects will be visible at.")]
         public int visRange = 30;

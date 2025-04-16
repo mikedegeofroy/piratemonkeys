@@ -1,4 +1,5 @@
 #if UNITY_EDITOR
+using Edgegap.Editor;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -10,9 +11,10 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
+using UnityEngine;
 using Debug = UnityEngine.Debug;
 
-namespace Mirror.Hosting.Edgegap.Editor
+namespace Edgegap
 {
     internal static class EdgegapBuildUtils
     {

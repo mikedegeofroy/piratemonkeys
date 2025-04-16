@@ -1,10 +1,8 @@
 // Injects server/client active checks for [Server/Client] attributes
-
-using Mirror.Core;
 using Mono.CecilX;
 using Mono.CecilX.Cil;
 
-namespace Mirror.Editor.Weaver.Processors
+namespace Mirror.Weaver
 {
     static class ServerClientAttributeProcessor
     {
@@ -27,7 +25,7 @@ namespace Mirror.Editor.Weaver.Processors
         {
             if (md.Name == ".cctor" ||
                 md.Name == NetworkBehaviourProcessor.ProcessedFunctionName ||
-                md.Name.StartsWith(RemoteProcedureCalls.InvokeRpcPrefix))
+                md.Name.StartsWith(RemoteCalls.RemoteProcedureCalls.InvokeRpcPrefix))
                 return false;
 
             if (md.IsAbstract)

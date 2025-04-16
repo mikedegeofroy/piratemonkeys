@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Mirror.Hosting.Edgegap.Editor
+namespace Edgegap.Editor
 {
     [Serializable]
     public class GithubRelease

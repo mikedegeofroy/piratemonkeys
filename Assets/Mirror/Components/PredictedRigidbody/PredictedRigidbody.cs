@@ -8,15 +8,12 @@
 //
 // The downside is that history rewinding is done manually via Vector math,
 // instead of real physics. It's not 100% correct - but it sure is fast!
-
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using Mirror.Core;
-using Mirror.Core.Prediction;
 using UnityEngine;
 
-namespace Mirror.Components.PredictedRigidbody
+namespace Mirror
 {
     public enum PredictionMode { Smooth, Fast }
 

@@ -3,20 +3,16 @@
 // by simply overwriting all the thread functions
 //
 // note that ThreadLog.cs is required for Debug.Log from threads to work in builds.
-
 using System;
 using System.Collections.Concurrent;
 using System.Diagnostics;
-using System.Net;
 using System.Runtime.CompilerServices;
+using System.Net;
 using System.Threading;
-using Mirror.Core;
-using Mirror.Core.Threading;
-using Mirror.Core.Tools;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
-namespace Mirror.Transports.Threaded
+namespace Mirror
 {
     // buffered events for main thread
     enum ClientMainEventType

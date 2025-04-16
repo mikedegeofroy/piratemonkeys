@@ -1,11 +1,10 @@
 using System.Collections.Generic;
 using System.Reflection;
-using Mirror.Transports.KCP;
+using kcp2k;
 using UnityEditor;
 using UnityEngine;
-
 #if UNITY_EDITOR
-namespace Mirror.Transports.Edgegap.EdgegapLobby
+namespace Edgegap
 {
     [CustomEditor(typeof(EdgegapLobbyKcpTransport))]
     public class EncryptionTransportInspector : UnityEditor.Editor

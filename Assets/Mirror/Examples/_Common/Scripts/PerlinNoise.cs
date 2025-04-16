@@ -1,7 +1,7 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEditor;
 
-namespace Mirror.Examples._Common.Scripts
+namespace Mirror.Examples.Common.Controllers.Player
 {
     [ExecuteInEditMode]
     [AddComponentMenu("")]

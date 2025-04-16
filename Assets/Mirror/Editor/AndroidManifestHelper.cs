@@ -1,15 +1,16 @@
 // Android NetworkDiscovery Multicast fix
 // https://github.com/vis2k/Mirror/pull/2887
-
-using System.Xml;
 using UnityEditor;
+using UnityEngine;
 using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
+using System.Xml;
+using System.IO;
 #if UNITY_ANDROID
 using UnityEditor.Android;
 #endif
 
-namespace Mirror.Editor
+namespace Mirror
 {
     [InitializeOnLoad]
     public class AndroidManifestHelper : IPreprocessBuildWithReport, IPostprocessBuildWithReport

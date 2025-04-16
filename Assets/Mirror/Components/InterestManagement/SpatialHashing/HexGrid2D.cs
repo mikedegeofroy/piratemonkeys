@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Mirror.Components.InterestManagement.SpatialHashing
+namespace Mirror
 {
     internal class HexGrid2D
     {

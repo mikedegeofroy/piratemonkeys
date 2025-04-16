@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Mirror.Core;
 using UnityEngine;
 
-namespace Mirror.Components.InterestManagement.SpatialHashing
+namespace Mirror
 {
     [AddComponentMenu("Network/ Interest Management/ Spatial Hash/Hex Spatial Hash (3D)")]
-    public class HexSpatialHash3DInterestManagement : Core.InterestManagement
+    public class HexSpatialHash3DInterestManagement : InterestManagement
     {
         [Range(1, 60), Tooltip("Time interval in seconds between observer rebuilds")]
         public byte rebuildInterval = 1;

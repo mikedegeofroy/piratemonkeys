@@ -1,8 +1,7 @@
-using Mirror.Core;
-using Mirror.Examples._Common.Controllers.TankController;
+using Mirror.Examples.Common.Controllers.Tank;
 using UnityEngine;
 
-namespace Mirror.Examples.TankTheftAuto.Scripts
+namespace Mirror.Examples.TankTheftAuto
 {
     [AddComponentMenu("")]
     public class TankTheftAutoNetMan : NetworkManager

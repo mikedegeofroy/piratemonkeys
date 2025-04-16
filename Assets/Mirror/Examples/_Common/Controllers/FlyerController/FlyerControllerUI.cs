@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Mirror.Examples._Common.Controllers.FlyerController
+namespace Mirror.Examples.Common.Controllers.Flyer
 {
     [AddComponentMenu("")]
     [DisallowMultipleComponent]

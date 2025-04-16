@@ -1,6 +1,5 @@
 using System;
-
-namespace Mirror.Transports.Edgegap.EdgegapLobby.Models
+namespace Edgegap
 {
     // https://docs.edgegap.com/docs/lobby/functions#updating-a-lobby
     [Serializable]

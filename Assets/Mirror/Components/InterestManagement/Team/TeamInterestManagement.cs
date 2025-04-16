@@ -1,11 +1,10 @@
 using System.Collections.Generic;
-using Mirror.Core;
 using UnityEngine;
 
-namespace Mirror.Components.InterestManagement.Team
+namespace Mirror
 {
     [AddComponentMenu("Network/ Interest Management/ Team/Team Interest Management")]
-    public class TeamInterestManagement : Core.InterestManagement
+    public class TeamInterestManagement : InterestManagement
     {
         readonly Dictionary<string, HashSet<NetworkTeam>> teamObjects =
             new Dictionary<string, HashSet<NetworkTeam>>();

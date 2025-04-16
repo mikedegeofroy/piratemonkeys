@@ -1,4 +1,4 @@
-﻿namespace Mirror.Examples.PickupsDropsChilds.Scripts
+﻿namespace Mirror.Examples.PickupsDropsChilds
 {
     public enum EquippedItem : byte
     {

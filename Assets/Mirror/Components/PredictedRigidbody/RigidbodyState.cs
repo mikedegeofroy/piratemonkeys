@@ -1,10 +1,8 @@
 // PredictedRigidbody stores a history of its rigidbody states.
-
 using System.Runtime.CompilerServices;
-using Mirror.Core.Prediction;
 using UnityEngine;
 
-namespace Mirror.Components.PredictedRigidbody
+namespace Mirror
 {
     // inline everything because this is performance critical!
     public struct RigidbodyState : PredictedState

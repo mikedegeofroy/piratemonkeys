@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Mirror.Examples._Common.Controllers.PlayerController
+namespace Mirror.Examples.Common.Controllers.Player
 {
     [AddComponentMenu("")]
     [DisallowMultipleComponent]

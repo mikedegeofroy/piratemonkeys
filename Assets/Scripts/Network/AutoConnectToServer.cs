@@ -1,5 +1,5 @@
-using Mirror.Core;
-using Mirror.Transports.SimpleWeb;
+using Mirror;
+using Mirror.SimpleWeb;
 using UnityEngine;
 
 namespace Network
